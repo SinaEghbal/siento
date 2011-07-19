@@ -1,0 +1,32 @@
+conf_a=zeros(5,5);
+conf_v=zeros(5,5);
+se_a=[];
+se_v=[];
+for i=1:10
+    %for each user
+    [res_a,res_v]=analyse2(i);
+    conf_a=conf_a+res_a.cm_a;
+    conf_v=conf_v+res_v.cm_v;
+    results_a(i,1)=res_a.knn_correct;
+    results_a(i,2)=res_a.lda_correct;
+    results_a(i,3)=res_a.qdr_correct;
+    results_a(i,4)=res_a.svm_correct;
+    results_a(i,5)=res_a.chance_correct;
+    results_a_20(i,1)=res_a.knn_correct20;
+    results_a_20(i,2)=res_a.lda_correct20;
+    results_a_20(i,3)=res_a.qdr_correct20;
+    results_a_20(i,4)=res_a.svm_correct20;
+    results_a_20(i,5)=res_a.chance_20;
+    results_v(i,1)=res_v.knn_correct;
+    results_v(i,2)=res_v.lda_correct;
+    results_v(i,3)=res_v.qdr_correct;
+    results_v(i,4)=res_v.svm_correct;
+    results_v(i,5)=res_v.chance_correct;
+    results_v_20(i,1)=res_v.knn_correct20;
+    results_v_20(i,2)=res_v.lda_correct20;
+    results_v_20(i,3)=res_v.qdr_correct20;
+    results_v_20(i,4)=res_v.svm_correct20;
+    results_v_20(i,5)=res_v.chance_20;
+    se_a=[se_a;res_a.se];
+    se_v=[se_v;res_v.se];
+end

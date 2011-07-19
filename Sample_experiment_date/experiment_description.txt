@@ -1,0 +1,5 @@
+%% experiment description
+
+subject_id = '1'
+date_recording = 'March 26, 2009'
+notes = 'A descripotion of the protocol'

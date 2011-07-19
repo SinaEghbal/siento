@@ -1,0 +1,15 @@
+This Directory contains all external the packages / libraries.
+This file should contain the credits and links to downlaoding those resources.
+
+Aubt/ includes the files (not the whole package) that are used in siento 
+to produce features of physiological signals
+
+PRTools/ contains the pattern recognition library, with calssification utilities used in siento
+
+*jar are the java libraries used for text mining
+glosser-tml-2.1.jar		lucene-snowball-2.3.0.jar
+log4j-1.2.14.jar		stanford-parser-1.6.0.jar
+lucene-analyzers-2.3.1.jar	weka-3.5.6.jar
+lucene-core-2.3.0.jar
+
+

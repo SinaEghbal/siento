@@ -1,0 +1,10 @@
+v.a = 1.2345;
+v.b = [1 2 3 4; 5 6 7 8];
+v.c = 'This is a string.';
+v.d = {'alpha', 'beta'};
+v.e = (1==2);
+v.f.sub1.subsub1 = 1;
+v.f.sub1.subsub2 = 2;
+v.g(1).aa(1) = {'g1aa1'};
+v.g(1).aa(2) = {'g1aa2'};
+v.g(2).aa(1) = {'g2aa1'};
