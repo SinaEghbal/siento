@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data_Acquisition_Oscilloscope>
+   <Display Color="-983066" DataTipHitRange="8" HorizontalOffset="0.0" HorizontalScale="0.16327571306557942" HorizontalUnits="s" Layer="1" Name="ch4" PixelsPerDivision="30" ShowAsScientific="false" ShowDataTip="true" ShowHorizontalValue="true" ShowName="true" XGrid="true" XGridColor="-4144960" XMinorGrid="true" XTickColor="-16777216" YGrid="true" YGridColor="-4144960" YMinorGrid="true" YTickColor="-16777216"/>
+   <Display Color="-983066" DataTipHitRange="8" HorizontalOffset="0.0" HorizontalScale="0.16327571306557942" HorizontalUnits="s" Layer="1" Name="emg" PixelsPerDivision="30" ShowAsScientific="false" ShowDataTip="true" ShowHorizontalValue="true" ShowName="true" XGrid="true" XGridColor="-4144960" XMinorGrid="true" XTickColor="-16777216" YGrid="true" YGridColor="-4144960" YMinorGrid="true" YTickColor="-16777216"/>
+   <Display Color="-983066" DataTipHitRange="8" HorizontalOffset="0.0" HorizontalScale="0.16327571306557942" HorizontalUnits="s" Layer="1" Name="ecg" PixelsPerDivision="30" ShowAsScientific="false" ShowDataTip="true" ShowHorizontalValue="true" ShowName="true" XGrid="true" XGridColor="-4144960" XMinorGrid="true" XTickColor="-16777216" YGrid="true" YGridColor="-4144960" YMinorGrid="true" YTickColor="-16777216"/>
+   <DataChannel Added="false" BufferSize="100000" ChannelIndex="1" Color="-16777216" Description="Hardware Channel7" DisplayName="" HardwareID="7" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH1" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="2.6240472453761927" VerticalScale="1.2891321589719929E10" VerticalUnits="V"/>
+   <DataChannel Added="false" BufferSize="100000" ChannelIndex="2" Color="-16777216" Description="Hardware Channel6" DisplayName="" HardwareID="6" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH2" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="1.555557078775414" VerticalScale="5.424497752869405" VerticalUnits="V"/>
+   <DataChannel Added="false" BufferSize="100000" ChannelIndex="3" Color="-16777216" Description="Hardware Channel5" DisplayName="" HardwareID="5" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH3" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="1.1886012418128329" VerticalScale="6.009327465944065" VerticalUnits="V"/>
+   <DataChannel Added="true" BufferSize="100000" ChannelIndex="4" Color="-16777216" Description="Hardware Channel4" DisplayName="ecg" HardwareID="4" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH4" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="2.5283505160620865" VerticalScale="0.9940097217383194" VerticalUnits="V"/>
+   <DataChannel Added="false" BufferSize="100000" ChannelIndex="5" Color="-16777216" Description="Hardware Channel3" DisplayName="" HardwareID="3" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH5" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="1.0991665498798118" VerticalScale="2.2651569000570886" VerticalUnits="V"/>
+   <DataChannel Added="false" BufferSize="100000" ChannelIndex="6" Color="-16777216" Description="Hardware Channel2" DisplayName="" HardwareID="2" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH6" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="1.1" VerticalScale="1.0" VerticalUnits="V"/>
+   <DataChannel Added="true" BufferSize="100000" ChannelIndex="7" Color="-16777216" Description="Hardware Channel1" DisplayName="emg" HardwareID="1" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH7" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="2.13333" VerticalScale="1.0" VerticalUnits="V"/>
+   <DataChannel Added="false" BufferSize="100000" ChannelIndex="8" Color="-16777216" Description="Hardware Channel0" DisplayName="" HardwareID="0" Marker="0" MarkerEdgeColor="-16777216" MarkerInterval="1" MarkerSize="6" Name="CH8" SampleRate="1000.0" ShowAsScientific="false" ShowIndicator="true" ShowSequenceTriggers="false" ShowVerticalValue="true" Style="1" VerticalOffset="3.2" VerticalScale="1.0" VerticalUnits="V"/>
+   <Trigger Acquisition="Continuous" Count="false" CountValue="500" FillDisplay="true" TriggerChannel="CH4" TriggerCondition="Rising" TriggerIndicatorColor="-16777216" TriggerIndicatorSelectedColor="-65536" TriggerType="independent" TriggerValue1="0" TriggerValue2="0"/>
+   <Measurement Added="true" BufferSize="1" Channel="CH5" Color="-16777216" DrawValueAlways="true" HorizontalAlignment="0" Label="" SelectedColor="-65536" ShowInDisplay="true" Type="None" VerticalAlignment="0"/>
+   <Measurement Added="true" BufferSize="1" Channel="CH5" Color="-16777216" DrawValueAlways="true" HorizontalAlignment="0" Label="" SelectedColor="-65536" ShowInDisplay="true" Type="None" VerticalAlignment="0"/>
+   <MeasurementType Enabled="true" Expression="" Orientation="2" Type="None"/>
+   <MeasurementType Enabled="true" Expression="Horiz" Orientation="0" Type="Horiz"/>
+   <MeasurementType Enabled="true" Expression="Vert" Orientation="1" Type="Vert"/>
+   <MeasurementType Enabled="true" Expression="max" Orientation="0" Type="Max"/>
+   <MeasurementType Enabled="true" Expression="min" Orientation="0" Type="Min"/>
+   <MeasurementType Enabled="true" Expression="mean" Orientation="0" Type="Mean"/>
+   <MeasurementType Enabled="true" Expression="peak2peak" Orientation="2" Type="Pk2Pk"/>
+   <MeasurementType Enabled="true" Expression="frequency" Orientation="2" Type="Freq"/>
+   <MeasurementType Enabled="true" Expression="period" Orientation="2" Type="Period"/>
+   <MeasurementType Enabled="true" Expression="rms" Orientation="0" Type="RMS"/>
+   <MeasurementType Enabled="true" Expression="std" Orientation="0" Type="STD"/>
+   <Location Height="746" Width="1032" X="-4" Y="-4"/>
+   <SelectedChannels>
+      <Index>0</Index>
+   </SelectedChannels>
+   <PanelOrder>
+      <Panel>ChannelPane</Panel>
+      <Panel>TriggerPane</Panel>
+   </PanelOrder>
+   <ChannelPane HorizontalOffsetSensitivity="0.002777777777777778" HorizontalScaleSensitivity="0.01" Name="Channel Scaling" ShowName="true" VerticalOffsetSensitivity="0.005555555555555556" VerticalScaleSensitivity="0.01"/>
+   <TriggerPane Name="Triggers" ShowName="true"/>
+   <AnalogInput ID="1" InputType="NonReferencedSingleEnded" SampleRate="1000" Vendor="nidaq">
+      <Channel HwChannel="7" InputRange="-5  5"/>
+      <Channel HwChannel="6" InputRange="-5  5"/>
+      <Channel HwChannel="5" InputRange="-5  5"/>
+      <Channel HwChannel="4" InputRange="-5  5"/>
+      <Channel HwChannel="3" InputRange="-5  5"/>
+      <Channel HwChannel="2" InputRange="-5  5"/>
+      <Channel HwChannel="1" InputRange="-5  5"/>
+      <Channel HwChannel="0" InputRange="-5  5"/>
+   </AnalogInput>
+</Data_Acquisition_Oscilloscope>

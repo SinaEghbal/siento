@@ -1,0 +1,115 @@
+<emotionml xmlns="http://www.w3.org/2008/11/emotiomml" xml_tb_version="3.1">
+  <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+    <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+    <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+    <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+    <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+    <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+    <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+    <emotion>
+    <category set="enactedPicard" name="anger" confidence="1">
+    </category>
+    <link uri="Sample_experiment_date/video/session1.avi" role="eliciting video" start="13" end="38">
+    </link>
+    <link uri="Sample_experiment_date/Physio/anger.mat" role="Physio recording" start="86" end="111">
+    </link>
+    <dimensions set="valenceArousalPotency" 
+		confidence="0.8">
+        		<arousal value="0.3"/> <!-- low arousal -->
+        		<valence value="0.3"/> <!-- neg valence -->
+        		<potency value="0.3"/> <!-- low potency    -->
+    	</dimensions>
+  </emotion>
+</emotionml>
+

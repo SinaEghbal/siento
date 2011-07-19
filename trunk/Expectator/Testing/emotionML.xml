@@ -1,0 +1,11 @@
+<emotionml xmlns="http://www.w3.org/2008/11/emotiomml" xml_tb_version="3.1">
+  <emotion>
+    <category set="IAPS" name="dead.jpg">
+    </category>
+    <link uri="vid.avi" role="Started IAPS" start="13" end="38">
+    </link>
+    <link uri="vid.avi" role="Ended IAPS" start="86" end="111">
+    </link>
+  </emotion>
+</emotionml>
+
