@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<!-- Dependency --> 
+<script src="http://yui.yahooapis.com/2.8.2r1/build/yahoo/yahoo-min.js" ></script>
+
+<!-- Event source file -->
+<script src="http://yui.yahooapis.com/2.8.2r1/build/event/event-min.js" ></script>
+
+<!-- Sam Skin CSS -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/container/assets/skins/sam/container.css">
+
+<!-- Dependencies -->
+<script src="http://yui.yahooapis.com/2.8.2r1/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+
+<!-- OPTIONAL: Animation (only required if using ContainerEffect) -->
+<script src="http://yui.yahooapis.com/2.8.2r1/build/animation/animation-min.js"></script>
+
+<!-- OPTIONAL: Drag & Drop (only required if enabling Drag & Drop) -->
+<script src="http://yui.yahooapis.com/2.8.2r1/build/dragdrop/dragdrop-min.js"></script>
+
+<!-- Source file -->
+<script src="http://yui.yahooapis.com/2.8.2r1/build/container/container-min.js"></script>
+
+<Style>
+.transparent_class {
+        filter:alpha(opacity=50);
+        -moz-opacity:0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5;
+}
+</style>
+
+		<title>
+			Proxy Test
+		</title>
+	</head>
+	<body class="yui-skin-sam">
+
+	</body>
+
+	<script>
+	
+	
+	//The second argument passed to the
+//constructor is a configuration object:
+/*
+myPanel = new YAHOO.widget.Panel("win", {
+    width: "1000px", 
+	height: "1000px", 
+    fixedcenter: true, 
+    constraintoviewport: true, 
+    underlay: "shadow", 
+    close: true, 
+    visible: false,
+	zIndex:1,
+    draggable: true
+});
+
+//If we haven't built our panel using existing markup,
+//we can set its content via script:
+
+myPanel.setHeader("The Panel Control");
+myPanel.setBody("The Panel is a powerful UI control that enables you to create floating windows without using browser popups.  Effects like drag and drop and constrain-to-viewport are easy to configure.");
+
+//Although we configured many properties in the
+//constructor, we can configure more properties or 
+//change existing ones after our Panel has been
+//instantiated:
+
+	myPanel.cfg.setProperty("underlay","matte");
+	myPanel.render(document.body);
+	myPanel.show();
+	
+	*/
+	
+	YAHOO.lang.later ( 1000 , document , attachEvents , null , false );
+
+	YAHOO.lang.later ( 100 , document , moveBand , null , true );
+
+	
+	var eventDIV = document.getElementById('eventDIV');
+	i = 0;
+	function moveBand() { 
+		eventDIV.style.left = i+'00px';
+		i++;
+		if (i==17)
+		{
+			i = 0;
+		}
+	}	
+
+
+	function attachEvents() { 
+	    YAHOO.util.Event.addListener(document, "click", fnCallback);
+	}
+
+
+
+	function fnCallback(e) { alert("click"); }
+
+
+
+	
+	function processMousedown(e) {
+alert(e);
+	/* get event target, x, and y value of mouse position
+	 * NS: first case (window.Event available); IE: second case */
+	var ev 		= (window.Event) ? e : window.event;
+	var target 	= (window.Event) ? ev.target : ev.srcElement;
+	var x 		= (window.Event) ? ev.pageX : ev.clientX;
+	var y 		= (window.Event) ? ev.pageY : ev.clientY; 
+	
+	var xOffset = x - absLeft(target);	// compute x offset relative to the hovered-over element
+	var yOffset = y - absTop(target);	// compute y offset relative to the hovered-over element
+	
+		
+	/** mouse button detection: was middle or right mouse button clicked ? */
+	var mbutton = "left";
+	if (ev.which) {  		// NS
+		switch(ev.which) {
+			case 2: mbutton = "m"; break;	// middle button
+			case 3: mbutton = "r"; break;	// right button
+		}
+	} else if (ev.button) {		// IE
+		switch(ev.button) {
+			case 4: mbutton = "m"; break;
+			case 2: mbutton = "r"; break;
+		}
+	}
+		
+	/** if left mouse button was pressed and the target element
+	    isn't a direct child node of
+	    the top-level HTML element e.g. the scrollbar */
+	if (mbutton=="left" && target.parentNode!=document.documentElement) {
+			
+		/* if regular click, log click coordinates relative to the clicked element
+   		   and all available target attributes */
+		// if element has an id attribute
+		if (target.id) 	writeLog("mousedown&offset=" + xOffset + "," + yOffset + "&id=" + target.id + generateEventString_UsaProxy(target) );
+		else {
+			// if element has a name attribute
+			if(target.name) writeLog("mousedown&offset=" + xOffset + "," + yOffset + "&name=" + target.name + generateEventString_UsaProxy(target));
+			else {
+				writeLog("mousedown&offset=" + xOffset + "," + yOffset + generateEventString_UsaProxy(target));
+			}
+		}
+			
+	}
+}
+
+function writeLog_UsaProxy(text /*string*/) {
+	alert(text);	
+}
+	</script>
+</html>

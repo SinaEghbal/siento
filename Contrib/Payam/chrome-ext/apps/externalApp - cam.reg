@@ -1,0 +1,13 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\cam]
+@="URL:cam Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\cam\shell]
+
+[HKEY_CLASSES_ROOT\cam\shell\open]
+
+[HKEY_CLASSES_ROOT\cam\shell\open\command]
+@="\"C:\\hamed_video\\myRecording.exe\" \"%1\""
+

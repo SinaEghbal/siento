@@ -1,0 +1,12 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\acq]
+@="URL:acq Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\acq\shell]
+
+[HKEY_CLASSES_ROOT\acq\shell\open]
+
+[HKEY_CLASSES_ROOT\acq\shell\open\command]
+@="\"C:\\Program Files (x86)\\BIOPAC Systems Inc\\AcqKnowledge 3.8.2\\Acq38.exe\" \"%1\""
