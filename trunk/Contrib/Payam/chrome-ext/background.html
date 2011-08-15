@@ -1,0 +1,144 @@
+
+<html>
+  <head>
+  <script type="text/javascript" src="js/jquery-1.6.1.js"></script> 
+  
+  <!-- Sam Skin CSS -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/container/assets/skins/sam/container.css">
+
+<!-- OPTIONAL: You only need the YUI Button CSS if you're including the Button script fille, mentioned above. -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/button/assets/skins/sam/button.css">
+<link type="text/css" rel="stylesheet" href="http://yui.yahooapis.com/2.8.2r1/build/progressbar/assets/skins/sam/progressbar.css">
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/yahoo/yahoo-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/event/event-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/connection/connection-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/element/element-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/button/button-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/container/container-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/animation/animation-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/dragdrop/dragdrop-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/json/json-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.2r1/build/progressbar/progressbar-min.js" ></script>
+
+  
+  </head>
+  <body class="yui-skin-sam">
+    <script>
+	
+
+	 
+	 var xmlreqs_LogExt = new Array();	/** contains the currently used XMLHttpRequest objects */
+	 /** Sends an asynchronous HTTP request to LogExt.
+	Examines each existent XMLHttpRequest object in xmlreqs_LogExt array,
+	whether it is ready to handle this request. If not, a new OBJ_XHR_LogExt
+	object is created with a freed value of 1 and added to the array.
+	Then, the request is sent, freed is set to 0: occupied, and the readystatechange listener
+	assigned the specified handler function. */
+function xmlreqGET_LogExt(url /*string*/, callback_function /*function*/) {
+	var pos = -1;
+	for (var i=0; i< xmlreqs_LogExt.length; i++) {
+		if (xmlreqs_LogExt[i].freed == 1) { pos = i; break; }
+	}
+	if (pos == -1) { pos = xmlreqs_LogExt.length; xmlreqs_LogExt[pos] = new OBJ_XHR_LogExt(1); }
+	if (xmlreqs_LogExt[pos].newReq) {
+		xmlreqs_LogExt[pos].freed = 0;
+		xmlreqs_LogExt[pos].newReq.open("GET",url,true);
+		xmlreqs_LogExt[pos].newReq.onreadystatechange = function() {
+			if (window.xmlhttpChange_LogExt) { xmlhttpChange_LogExt(pos, callback_function); }
+		}
+		if (window.XMLHttpRequest) {
+			xmlreqs_LogExt[pos].newReq.send(null);
+		} else if (window.ActiveXObject) {
+			xmlreqs_LogExt[pos].newReq.send();
+		}
+	}
+}
+
+/** Executes the specified handler function and 
+    assigns it the received XML response provided by the used XMLHttpRequest object
+	(stored in the array at position pos) */
+function xmlhttpChange_LogExt(pos /*number*/, callback_function /*function*/) {
+	if (typeof(xmlreqs_LogExt[pos]) != 'undefined' && xmlreqs_LogExt[pos].freed == 0 && xmlreqs_LogExt[pos].newReq.readyState == 4) {
+		// try catch due to status exceptions in Firefox
+		try {
+			if (xmlreqs_LogExt[pos].newReq.status == 200 || xmlreqs_LogExt[pos].newReq.status == 304) {
+				callback_function(xmlreqs_LogExt[pos].newReq.responseText); 
+			} else {
+				//alert(xmlreqs_LogExt[pos].newReq.status);
+				//alert(xmlreqs_LogExt[pos].newReq.responseText);
+				//handle_error();
+			}
+			xmlreqs_LogExt[pos].freed = 1;
+		}
+		catch( e ) {
+		//	alert('Caught Exception: ' + e.description);
+		}
+	}
+}
+
+/* Creates a new XMLHttpRequest object with a freed parameter 
+   which indicates whether the object is currently operating 
+   (e.g. expecting a LogExt response) */
+function OBJ_XHR_LogExt(freed /*number*/){
+	this.freed = freed;
+	this.newReq = false;
+	// NS
+	if(window.XMLHttpRequest) {
+	  	try { this.newReq = new XMLHttpRequest(); }
+	  	catch(e) { this.newReq = false; }
+	}
+	// IE
+	else if(window.ActiveXObject) {
+	  try { this.newReq = new ActiveXObject("Microsoft.XMLHTTP"); }
+	  catch(e) {
+		try { this.newReq = new ActiveXObject("Msxml2.XMLHTTP"); }
+		catch(e) {
+		  this.newReq = false;
+		}
+	  }
+	}
+}
+	 
+     
+      function onRequest(request, sender, callback) {
+		if(request.cmd == "log") {	
+			xmlreqGET_LogExt(request.url, callback);
+		}else if(request.cmd == "read_file") {
+			$.ajax({
+				url: chrome.extension.getURL(request.url),
+				dataType: "html",
+				success: callback
+			});
+		}
+      };
+	
+
+	  
+	chrome.tabs.onSelectionChanged.addListener(function (tabId,selectInfo) {
+		chrome.tabs.sendRequest(tabId, {cmd: "tabChanged"}, function(response) {
+		});
+	});
+	
+	chrome.tabs.onUpdated.addListener(function(tabId,changeInfo,tab) {
+		chrome.tabs.sendRequest(tab.id, {cmd: "tabUpdated"}, function(response) {
+		});
+	});
+	
+	chrome.tabs.onCreated.addListener(function(tab) {
+		chrome.tabs.sendRequest(tab.id, {cmd: "tabCreated"}, function(response) {
+		});
+	});	
+	
+	chrome.tabs.onRemoved.addListener(function(tabId,removeInfo) {
+		chrome.tabs.sendRequest(tabId, {cmd: "tabRemoved"}, function(response) {
+		});
+	});
+	
+    // Wire up the listener.
+    chrome.extension.onRequest.addListener(onRequest);
+	  
+    </script>
+  </body>
+</html>

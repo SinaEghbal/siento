@@ -1,0 +1,9 @@
+
+document.body.addEventListener('keypress', myFunction, true);
+document.body.addEventListener('click', myFunction, true);
+function myFunction(event) {
+	
+    alert("click");
+	
+}
+//setTimeout ( myFunction, 5000 );

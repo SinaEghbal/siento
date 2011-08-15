@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<style>
+			body {
+				min-width:357px;
+				overflow-x:hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+					<h2> Logging all user's actions</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href='javascript:openApp("acq://C:\\biopac_data\\template.acq")'>Open Biopac Acq</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href='javascript:openApp("cam:\\option[stop]dir[c:\\Test\\]")'>Open Web Cam</a>
+				</td>
+			</tr>
+		</table>
+		
+		
+		
+	</body>
+	
+	<script>
+		var newTabId = -100;
+		function openApp(protocol){
+			chrome.tabs.create({"url":protocol, "selected":false}, function(tab){
+				newTabId = tab.id;
+			} );
+		}
+		
+///		function runForever(){
+//			alert(newTabId);
+//			if (newTabId != -100){
+//				chrome.tabs.remove(newTabId);
+//				newTabId = -100;
+//			}else{
+//				setTimeout (runForever,2000);
+//			}
+//		}
+//		runForever();
+
+</script>
+</html>
