@@ -1,0 +1,15 @@
+
+Processing Filename: spambase.data, Data: 4601, Feature: 57, Class: 2
+Classifier:perceptron
+Message: Cross Validation, Folder: 3,  Classification,  Shuffled 
+Error = 0.105848, Precision = 0.825335, Recall = 0.928351, F1 = 0.873790, 
+
+Processing Filename: spambase.data, Data: 4601, Feature: 57, Class: 2
+Classifier:MCAdaBoostM1 -- perceptron
+Message: Cross Validation, Folder: 3,  Classification,  Shuffled 
+Error = 0.097586, Precision = 0.873052, Recall = 0.880133, F1 = 0.876564, 
+
+Processing Filename: spambase.data, Data: 4601, Feature: 57, Class: 2
+Classifier:MCAdaBoostM1 -- perceptron -MaxIter 1000
+Message: Cross Validation, Folder: 3,  Classification,  Shuffled 
+Error = 0.096718, Precision = 0.873954, Recall = 0.881866, F1 = 0.877521, 

@@ -1,0 +1,24 @@
+
+Processing Filename: ecoli.data, Data: 336, Feature: 7, Class: 8
+Classifier:kNN_classify -k 3
+Message: Cross Validation, Folder: 3,  Classification, 
+Error = 0.639881, Precision = 0.360119, Recall = 0.360119, F1 = 0.360119, 
+
+Processing Filename: ecoli.data, Data: 336, Feature: 7, Class: 8
+Classifier:kNN_classify -k 3
+Message: Cross Validation, Folder: 10,  Classification, 
+Error = 0.238681, Precision = 0.761319, Recall = 0.761319, F1 = 0.761319, 
+
+Processing Filename: ecoli.data, Data: 336, Feature: 7, Class: 8
+Classifier:perceptron
+Message: Cross Validation, Folder: 10,  Classification, 
+
+Processing Filename: ecoli.data, Data: 336, Feature: 7, Class: 8
+Classifier:train_test_multiple_class -- perceptron
+Message: Cross Validation, Folder: 10,  Classification, 
+Error = 0.697059, Precision = 0.302941, Recall = 0.302941, F1 = 0.302941, 
+
+Processing Filename: ecoli.data, Data: 336, Feature: 7, Class: 8
+Classifier:train_test_multiple_class -- perceptron
+Message: Cross Validation, Folder: 10,  Classification,  Shuffled 
+Error = 0.181551, Precision = 0.818449, Recall = 0.818449, F1 = 0.818449, 

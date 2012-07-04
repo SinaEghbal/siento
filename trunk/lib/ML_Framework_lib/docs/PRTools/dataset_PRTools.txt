@@ -1,0 +1,15 @@
+  A.DATA    = data
+  A.NLAB    = numeric labels, index in lablist
+  A.FEATLAB = feature labels
+  A.FEATDOM = feature domains
+  A.PRIOR   = prior probabilities
+  A.COST    = classification cost matrix
+  A.LABLIST = labels of the classes
+  A.TARGETS = dataset with soft labels or targets
+  A.LABTYPE = label type: 'crisp','soft' or 'target'
+  A.OBJSIZE = number of objects or vector with its shape
+  A.FEATSIZE= number of features or vector with its shape
+  A.IDENT   = identifier for objects (integer)
+  A.VERSION = PRTools version used for creating dataset
+  A.NAME    = string with name of the dataset
+  A.USER    = user field
