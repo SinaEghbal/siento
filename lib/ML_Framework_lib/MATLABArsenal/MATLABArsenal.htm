@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE> MATLAB Classification Wrapper 0.99 (Debug Version) </TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2800.1400" name=GENERATOR>
+<META content=8.0.3514 name=Version>
+<META content=11/26/96 name=Date>
+<META content="C:\Programme\Microsoft Office\Office\HTML.DOT" 
+name=Template></HEAD>
+<BODY vLink=#800080 link=#0000ff bgColor=#ffffff>
+<TABLE cellSpacing=0 cellPadding=5 border=0 width="916">
+  <TBODY> 
+  <TR>
+    <TD vAlign=top width="9%"> 
+      <H2>&nbsp;</H2>
+    </TD>
+    <TD vAlign=top width="89%"> 
+      <H1 align=center>MATLABArsenal</H1>
+      <H1 align=center>A MATLAB Wrapper for Classification</H1>
+      <P align=center> <FONT color=#000000>Developed at: <BR>
+        </font><A href="http://www.informedia.cs.cmu.edu" target=_top>Informedia</A><br>
+        <A href="http://www.cs.cmu.edu" target=_top>School of Computer Science</A><br>
+        <A href="http://www.cmu.edu" target=_top>Carnegie Mellon University</A></P>
+      <FONT color=#000000>
+      <P align=center>Version: 0.99 Debug Version<BR>
+        Date: 05.03.2004</P>
+      </FONT></TD>
+    <TD vAlign=top width="2%"> 
+      <H2>&nbsp;</H2>
+    </TD></TR></TBODY></TABLE>
+<H2>Overview</H2><FONT color=#000000>
+<P>MATLABArsenal is a open-source wrapper for the problem of classification written 
+  in MATLAB. The main features of the program are the following: </P>
+</FONT> 
+<UL>
+  <FONT color=#000000></font> 
+  <LI>include many popular classification algorithms 
+    <ul>
+      <li>(Transductive) Support Vector Machines (SVMs) 
+        <ul>
+          <li>SVM_light, libSVM, mySVM</li>
+        </ul>
+      </li>
+      <li>Logistic Regression / Maximum Entropy</li>
+      <li>Linear/Quadratic Discriminant Analysis</li>
+      <li>Kernel Logistic Regression</li>
+      <li>Gaussian Mixutre Models</li>
+      <li>k Nearest Neighbor </li>
+      <li>Multile Layer Perceptron</li>
+      <li>Naive Bayes </li>
+      <li>Decision Tree </li>
+      <li>TO DO: Bayes Net </li>
+      <li>TO DO: HMM,MEMM, CRF</li>
+    </ul>
+  <li>incorporate several machine learning packages 
+    <ul>
+      <li><a href="http://www.cs.waikato.ac.nz/ml/weka/">WEKA</a></li>
+      <li><a href="http://www.ncrg.aston.ac.uk/netlab/">NETLAB</a></li>
+      <li><a href="http://svmlight.joachims.org/%20">SVMLight</a>, <a href="http://www-ai.cs.uni-dortmund.de/SOFTWARE/MYSVM%20">mySVM</a>, 
+        <a href="http://www.csie.ntu.edu.tw/%7Ecjlin/libsvm/%20">libSVM</a></li>
+    </ul>
+  </li>
+  <li>implement the following ensemble schemes 
+    <ul>
+      <li>AdaBoostM1</li>
+      <li>Bagging</li>
+      <li>Up Sampling </li>
+      <li>Down Sampling</li>
+      <li>Stacking / Hierachial Classification<br>
+      </li>
+      <li>Stacking with Feature Subspaces</li>
+      <li>Majority Voting</li>
+      <li>Multi-Class Classification Wrapper using Output Coding</li>
+      <li>Multi-Label Classification Wrapper</li>
+    </ul>
+  </li>
+  <li>evaluation methods 
+    <ul>
+      <li>Cross Validation</li>
+      <li>Train Test Validation</li>
+      <li>Train Only</li>
+      <li>Test Only<br>
+      </li>
+    </ul>
+  </li>
+  <LI>support binary/multi-class active learning with best-worse case strategies 
+  <LI>support full/sparse vector representation 
+  <LI>allow feature selection using SVD or FLD 
+  <LI>scalable to new learning algorithms 
+  <LI>including learning algorithms with pairwise constraints / side information 
+  <LI>support shot-level classification<br>
+  <LI>TO DO: visualization<br>
+</UL>
+<H2>Description</H2>
+<P> <FONT color=#000000>MATLAB<i>Arsenal</i> is a open-source wrapper written 
+  in MATLAB for the problem of supervised learning / classification. </FONT></P>
+<H2>Source Code<FONT color=#000000> </FONT></H2>
+<FONT color=#000000>
+<P>The program is free for scientific use. Please contact me, if you are planning 
+  to use the software for commercial purposes. The software must not be modified 
+  and distributed without prior permission of the author. If you use MATLAB<i>Arsenal</i> 
+  in your scientific work, please cite as </P>
+</FONT> 
+<UL>
+  <LI>N/A yet</LI>
+</UL>
+<p><a href="http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenal.zip">http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenal.zip</a> 
+</p>
+<P>This wrapper is powered by several other machine learning packages. Their binaries 
+  have already been included in this release. If necessary, you can download their 
+  lastest version from the following websites, </P>
+<ul>
+  <li>N/A yet</li>
+</ul>
+<H2>Installation for MATLAB source code</H2>
+<ol>
+  <li>You can skip this step if you already have a MATLAB environment, otherwises you 
+    have to install MATLAB in your machine. <br>
+    <br>
+  </li>
+  <li>Download the package from <a href="http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenal.zip">http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenal.zip</a> 
+    <br>
+    <br>
+  </li>
+  <li>Unzip the .zip files into a arbitrary directory, say $MATLABArsenalRoot<br>
+    <br>
+  </li>
+  <li>Add the path $MATLABArsenalRoot and its subfolders in MATLAB. Use addpath 
+    command or menu File-&gt;Set Path. <br>
+  </li>
+</ol>
+<p>Then it is ready to go.</p>
+<p>&nbsp;</p>
+<H2>Installation for binary code<br>
+</H2>
+<ol>
+  <li>You can skip this step if you already have a Java Runtime environment, otherwises 
+    it is better to install Java in your machine (for WEKA). <br>
+    <br>
+  </li>
+  <li>Download the package from <a href="http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenalExec.zip">http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenalExec.zip</a> 
+    <br>
+    <br>
+  </li>
+  <li>Unzip the .zip files into a arbitrary directory, say $MATLABArsenalRoot<br>
+    <br>
+  </li>
+  <li>Add the path $MATLABArsenalRoot/bin/win32 to system path.<br>
+    <br>
+  </li>
+  <li>Run demo1.bat in the $MATLABArsenalRoot<br>
+  </li>
+</ol>
+<p>Then it is ready to go.</p>
+<p>&nbsp;</p>
+<h2></h2>
+<H2>How to use</H2>
+<P> <FONT color=#000000>This section explains how to use the MATLAB<i>Arsenal</i> 
+  software.</font></P>
+<FONT color=#000000> 
+<P>The main module of MATLAB<i>Arsenal</i> is called &quot;test_classify&quot;. 
+</P>
+<P> It can be called with the following approaches: </P>
+<P>(1) In MATLAB Command line, type</P>
+<pre> test_classify('classify -t input_file [options] [--@Evaluation [options]] ...
+				-- Classifier [param] [-- Classifiers]); 
+</pre>
+For example, the following commands use SVM_LIGHT with RBF kernel('-Kernel 2') 
+to classify, where param is 0.01, cost factor is 3. The first 100 data in TREC03_com.CNN.hstat1 
+is used as training data, the rest are the testing data. The data features('-n') 
+will be normalized to [0,1] before classificaiton. <br>
+<pre>   test_classify(strcat(
+		'classify -t TREC03_com.CNN.hstat1 -n 1', ...
+   		' -- train_test_validate -t 100 ', ...
+		' -- train_test_multiple_class ', ... 
+
+		' -- SVM_LIGHT -Kernel 2 -KernelParam 0.01 -CostFactor 3'));
+</pre>
+<P>You might need to run </P>
+<pre>clear global preprocess; </pre>
+<P>before classification to clean the global variable "preprocess" </P>
+</FONT> 
+<dir> 
+  <p></p>
+</dir>
+<FONT color=#000000>
+<P>(2) Write a .m files in the current directory as follows, and run </P>
+</FONT> 
+<pre>	global preprocess; </pre>
+<pre>	%Normalize the data
+   	preprocess.Normalization = 1;</pre>
+<pre>	%Evaluation Method
+   	%0: Train-Test Split
+   	%1: Cross Validation
+   	preprocess.Evaluation = 0;</pre>
+<pre>	preprocess.TrainTestSplitBoundary = 100;
+
+
+	% Multi-class classification
+   	% 0: Classification
+   	% 1: Multi-class Classification Wrapper
+   	% 2: Multi-label Classification Wrapper
+   	% 3: Multi-class Active Learning Wrapper
+   	preprocess.MultiClassType = 1;</pre>
+<pre>	preprocess.root = '.'; // Change to your files 
+   	preprocess.output_file = sprintf('%s/_Result', preprocess.root);
+   	preprocess.input_file = sprintf('%s/TREC03_com.CNN.hstat1', preprocess.root);</pre>
+<pre>	run = test_classify('SVM_LIGHT -Kernel 2 -KernelParam 0.01 -CostFactor 3');</pre>
+<p>This example give the same results as above. </p>
+<p><font color="#000000">(3) The binary code is running on the DOS command line. 
+  Suppose the current directory is $MATLABArsenalRoot, type</font></p>
+<pre><font color="#000000"> ./test_classify.exe &quot;classify -t input_file [options] [--@Evaluation [options]] ...
+				-- Classifier [param] [-- Classifiers]&quot;</font></pre>
+<font color="#000000"></font>with the same parameters as before. 
+<p>A more detailed documentation is avaiable in <a href="http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenalDoc/">http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenalDoc/</a></p>
+<FONT color=#000000> </FONT> 
+<h2></h2>
+<h2>Input &amp; Output Formats</h2>
+<FONT color=#000000>
+<P>Available options are: (To be continued) </P>
+</FONT> 
+<DIR><FONT color=#000000></font> 
+  <PRE>Output options: 
+         -o OUTPUT_FILE   - The file name of the result output file
+         -of [{'a'};'w']  - Overwrite the output file or append
+Input options:
+		 -if 0/1		  -	Use the first type or the second type of input formats</PRE>
+</DIR>
+<FONT 
+color=#000000> 
+<P>The input file <TT>example_file</TT> contains the training examples. Currently 
+  two typrs of input formats are accepted. The first type is, </P>
+</FONT>
+<dir> 
+  <p><font color="#000000"><tt>&lt;line&gt; .=. &lt;value&gt; &lt;value&gt; ... 
+    &lt;value&gt; &lt;target&gt;<br>
+    &lt;target&gt; .=. &lt;integer&gt;</tt><br>
+    <tt>&lt;value&gt; .=. &lt;float&gt;</tt> </font></p>
+</dir>
+<p></p>
+<FONT 
+color=#000000>
+<P><font color="#000000">Sample Input Format: (Each line represents one training 
+  example, Last number is the label, all others are the features)</font></P>
+</FONT> 
+<pre><font color="#000000">   </font><font color="#000000">0, 0, 0.40, 0
+   0, 1, 0.10, 0
+   0, 0, 0.05, 1
+   0, 0, 0.10, 1
+   0, 0, 0.15, 0
+   0, 0, 0.05, 0</font></pre>
+<FONT 
+color=#000000> 
+<P>For the second type of input format, each of the following lines represents 
+  one training example and is of the following format: </P>
+<DIR> 
+  <P> <TT>&lt;line&gt; .=. &lt;target&gt; &lt;feature&gt;:&lt;value&gt; &lt;feature&gt;:&lt;value&gt; 
+    ... &lt;feature&gt;:&lt;value&gt;<BR>
+    &lt;target&gt; .=. &lt;integer&gt;</tt>&nbsp; <BR>
+    <TT>&lt;feature&gt; .=. &lt;integer&gt; | "qid"</TT>&nbsp; <BR>
+    <TT>&lt;value&gt; .=. &lt;float&gt;</TT> </P>
+</DIR>
+<P><font color="#000000">Sample Input Format: (Each line represents one training 
+  example, First number is the label, all others are the features, zeros can be 
+  omitted)</font></P>
+</FONT> 
+<table width="49%" border="0">
+  <tr> 
+    <td width="37%"> 
+      <pre><font color="#000000">0 1:0 2:0 3:0.40
+0 1:0 2:1 3:0.10
+1 1:0 2:0 3:0.05
+1 1:0 2:0 3:0.10
+0 1:0 2:0 3:0.15
+0 1:0 2:0 3:0.05</font></pre>
+    </td>
+    <td width="23%"> 
+      <pre><b><font size="6">OR</font></b></pre>
+    </td>
+    <td width="40%"> 
+      <pre><font color="#000000">0 3:0.40
+0 2:1 3:0.10
+1 3:0.05
+1 3:0.10
+0 3:0.15
+0 3:0.05</font></pre>
+    </td>
+  </tr>
+</table>
+<p><FONT 
+color=#000000>There are two major output files. By default, their names are set 
+  to $(input_file).pred and $(input_file).result. The file $(input_file).pred 
+  contains the prediction results for each test instances. The sample output format 
+  is, </FONT> </p>
+<table width="36%" border="1" height="163">
+  <tr> 
+    <td> 
+      <pre>Index</pre>
+    </td>
+    <td> 
+      <pre>Prob</pre>
+    </td>
+    <td> 
+      <pre>Pred</pre>
+    </td>
+    <td> 
+      <pre>Truth</pre>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <pre>1</pre>
+    </td>
+    <td> 
+      <pre>0.98</pre>
+    </td>
+    <td> 
+      <pre>0</pre>
+    </td>
+    <td> 
+      <pre>0</pre>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <pre>2</pre>
+    </td>
+    <td> 
+      <pre>0.76</pre>
+    </td>
+    <td> 
+      <pre>1</pre>
+    </td>
+    <td> 
+      <pre>0</pre>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <pre>3</pre>
+    </td>
+    <td> 
+      <pre>0.60</pre>
+    </td>
+    <td> 
+      <pre>1</pre>
+    </td>
+    <td> 
+      <pre>1</pre>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <pre>4</pre>
+    </td>
+    <td> 
+      <pre>0.79</pre>
+    </td>
+    <td> 
+      <pre>0</pre>
+    </td>
+    <td> 
+      <pre>1</pre>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <pre>5</pre>
+    </td>
+    <td> 
+      <pre>0.52</pre>
+    </td>
+    <td> 
+      <pre>1</pre>
+    </td>
+    <td> 
+      <pre>0</pre>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <pre>6</pre>
+    </td>
+    <td> 
+      <pre>0.67</pre>
+    </td>
+    <td> 
+      <pre>0</pre>
+    </td>
+    <td> 
+      <pre>0</pre>
+    </td>
+  </tr>
+</table>
+<FONT 
+color=#000000> 
+<P>&nbsp;</P>
+<P>The file $(input_file).result contains the overall prediction statistics for 
+  the test set. The sample output format is,</P>
+<pre>Processing Filename: demo/DataExample1.txt
+   Classifier:kNN_classify -k 3
+   Message: Cross Validation, Folder: 3, Classification, 
+   Error = 0.234679, Precision = 0.375293, Recall = 0.337795, F1 = 0.354157, MAP    = 0.289376, MBAP = 0.209378,<i> </i></pre>
+</FONT> 
+<H2>Options and Classifiers<br>
+</H2>
+<p><font color="#000000">The basic grammar for MATLABArsenal's command is as follows. 
+  Note that &quot;--&quot; is used to separate different parts of the input commands. 
+  <br>
+  Do not forget to add spaces before and after the &quot;--&quot; otherwise the 
+  wrappers cannot parse the command correctly.</font></p>
+<pre><font color="#000000"> test_classify('classify -t input_file [general_option] [-- EvaluationMethod [evaluation_options]] ...
+				[-- ClassifierWrapper [param] ] -- BaseClassifier [param] ); </font></pre>
+<p><font color="#000000">More details for the available options, classifiers and 
+  their default values.</font></p>
+<blockquote> 
+  <p><font color="#000000">1. The general options</font></p>
+  <blockquote> 
+    <pre><font color="#000000">	-v   (def 1): preprocess.Vebosity, vebosity of messages<br>    -sf  (def 0): preprocess.Shuffled, shuffle the data or not. 0 for no shuffling<br>    -n   (def 1): preprocess.Normalization, normalize the data or not. 1 for normalizing<br>    -sh  (def -1): preprocess.ShotAvailable, shot information available or not. -1 for automatical detection<br>    -vs  (def 1): preprocess.ValidateByShot, <br>    -ds  (def 0): preprocess.DataSampling, do data sampling or not. 0 for none<br>    -dsr (def 0): preprocess.DataSamplingRate, data sampling rate <br>    -svd (def 0): preprocess.SVD, SVD dimension reduction. The parameter is number of reduced dimension<br>    -fld (def 0): preprocess.FLD, FLD dimension reduction. The parameter is number of reduced dimension<br>    -map (def 0): preprocess.ComputeMAP, report mean average precision<br>    -if  (def 0): preprocess.InputFormat, the input formats, either 0 or 1 <br>    -of  (def 0): preprocess.OutputFormat, the output formats, either 0 or 1 <br>    -pf  (def 0): preprocess.PredFormat, the prediction file formats, either 0 or 1 <br>    -chi (def 0): preprocess.ChiSquare, feature selection using chi-squared measure. <br>
+    -t    (def ''): preprocess.input_file, the input file name<br>    -o    (def ''): preprocess.output_file, the output file name<br>    -p    (def ''): preprocess.pred_file, the prediction file name<br>    -oflag(def 'a'):preprocess.OutputFlag, output flag. 'a' for appending, 'w' for 'overwriting'<br>    -dir  (def ''): preprocess.WorkingDir, the working directory, which is $MATLABArsenalRoot<br>    -drf  (def ''): preprocess.DimReductionFile, the intermediate file for dimension reduction</font></pre>
+  </blockquote>
+  <p><font color="#000000">2. The evaluation methods. The default method is to 
+    split the input file equally into training and testing sets. </font></p>
+  <pre><font color="#000000"> 	train_test_validate(default method): split the input data into training set and testing set<br>		options: -t (def -2): The training-testing splitting boundary for the data set<br> 	
+	cross_validate: cross validation<br>		options: -t (def 3): The folder for cross-validation<br> 	
+	test_file_validate: use the input file as the training set, the additional file as testing set<br>		options: -t (def ''): The additional testing file<br> 	
+	train_only: use the input file for training only<br>		options: -m (def ''): The output model file<br> </font><font color="#000000">	
+	test_only: use the input file for testing only<br>		options: -m (def ''): The input model file<br></font></pre>
+  <p>3<font color="#000000">. The multiclass classification wrappers. By default 
+    no wrappers are applied. </font></p>
+  <pre><font color="#000000"> 	train_test_simple(default method): no wrappers are applied<br> 	
+	train_test_multiple_class: multi-class classification wrappers<br>		options: -CodeType (def 0): Coding schemes. 0 is one-against-all, 1 is pairwise coupling, 2 is ECOC-16
+			 -LossFuncType (def 2): The type of loss functions. 0 is logist loss, 1 is exp loss, 2 is hinger loss 
+
+ 	train_test_multiple_label: multi-label classification wrappers<br> 	
+	train_test_multiple_class_AL: multi-class classification wrappers with active learning<br>		options: -CodeType (def 0): Coding schemes. 0 is one-against-all, 1 is pairwise coupling, 2 is ECOC-16
+			 -LossFuncType (def 2): The type of loss functions. 0 is logist loss, 1 is exp loss, 2 is hinger loss 
+			 -ALIter (def 4): Iterations for active learning
+			 -ALIncrSize (def 10): Incremental size per iteration<br></font></pre>
+  <p>4<font color="#000000">. The classifier wrappers. By default no wrappers 
+    are applied. </font></p>
+  <pre><font color="#000000"> 	WekaClassify (para) -- (Additional classifier and options): WEKA classification
+		options: -MultiClassWrapper (def -1): Multi-class wrapper for WEKA. 1 for activation and 0 for deactivation. -1 for automatcially select
+ 	
+	MCActiveLearning: Active learning module<br>		options: -Iter (def 10): Iterations for active learning
+				 -IncrSize (def 10): Incremental size per iteration
+
+ 	MCAdaBoostM1: AdaBoost.M1<br>		options: -Iter (def 10): Iterations for AdaBoost
+				 -SampleRatio (def 1): The ratio of data to be resampled per iteration. 1 means 100% of the data is resampled
+ 	
+	MCBagging: Bagging<br>		options: -Iter (def 10): Iterations for Bagging
+				 -SampleRatio (def 1): The ratio of data to be resampled per iteration. 1 means 100% of the data is resampled
+
+	MCDownSampling: Down sampling <br>		options: -PosNegRatio (def 0.5): The ratio of positive and negative data after sampling
+
+	MCUpSampling: Up sampling <br>		options: -PosNegRatio (def 0.5): The ratio of positive and negative data after sampling
+
+	MCHierarchyClassify (para) -- (Meta Classifer, para) [-- BaseClassifer]: Hierarchial classification, using the meta classifier on top
+		options: -PosNegRatio (def 0.5): The ratio of positive and negative data after sampling
+				 -SampleDevSet (def 0): Whether use a sampled development set to learn meta classifier or not. 0 is not.
+
+	MCWithMultiFSet: Hierarchial classification on multiple groups of features. See example 5<br>		options: -Voting (def 0): Use sum rule or majority voting to combine. 0 is sum rule.<br>				 -Separator (def 0): Separators for multiple feature groups.</font></pre>
+  <font color="#000000"><br>
+  </font>5<font color="#000000">. The base classifiers. </font> 
+  <pre><font color="#000000"> 	SVM_LIGHT: SVM_light classification
+		options: -Kernel (def 0): Kernel Type. 0 for linear, 1 for polynomial, 2 for RBF, 3 for sigmoid
+				 -KernelParam (def 0.05): Kernel Parameter. d for polynomial, g for RBF, a/b for sigmoid
+				 -CostFactor (def 1): Cost Factor, roughly the ratio of positive and negative data 
+				 -Threshold (def 0): Classification threshold. Classified as positive if larger than the threshold  
+
+ 	SVM_LIGHT_TRANSDUCTIVE: SVM_light transductive classification
+		options: -Kernel (def 0): Kernel Type. 0 for linear, 1 for polynomial, 2 for RBF, 3 for sigmoid
+				 -KernelParam (def 0.05): Kernel Parameter. d for polynomial, g for RBF, a/b for sigmoid
+				 -CostFactor (def 1): Cost Factor, roughly the ratio of positive and negative data 
+				 -Threshold (def 0): Classification threshold. Classified as positive if larger than the threshold  
+				 -TransPosFrac (def 1): Transductive postive fraction
+ 	
+ 	libSVM: libSVM classification 
+		options: -Kernel (def 0): Kernel Type. 0 for linear, 1 for polynomial, 2 for RBF, 3 for sigmoid
+				 -KernelParam (def 0.05): Kernel Parameter. d for polynomial, g for RBF, a/b for sigmoid
+				 -CostFactor (def 1): Cost Factor, roughly the ratio of positive and negative data 
+				 -Threshold (def 0): Classification threshold. Classified as positive if larger than the threshold  
+
+ 	mySVM: mySVM classification
+		options: -Config (def N/A): the configuration file
+
+	kNN_classify: kNN classification<br>		options: -k (def 1): number of neighbors
+				 -d (def 2): distnace type. 0 for Euclidean, 1 for chi-squared, 2 for cosine-similarity
+
+ 	GMM_classify: Gaussian Mixture Model classification
+		options: -NumMix (def 1): number of mixture for each class
+ 	
+	LDA_classify: Linear Discriminant Analysis classification<br>		options: -RegFactor (def 0.1): Regularization factors
+				 -QDA (def 0): 0 for LDA, 1 for QDA
+
+	IIS_classify: Maximum entopy model, IIS implementation<br>		options: -Iter (def 50): number of iterations
+				 -MinDiff (def 1e-7): Minimum difference of loglikelihood 
+				 -Sigma (def 0): Regularization factors
+
+	NeuralNet: Multi-layer perceptron (N/A for binary mode)<br>		options: -NHidden (def 10): Hidden units
+				 -NOut (def 1): Output units
+				 -Alpha (def 0.2): Weight decay 
+				 -NCycles (def 10): Number of training cycles
+
+	LogitReg: Logistic regression
+		options: -RegFactor (def 0): Regularization factors
+				 -CostFactor (def 1): Cost factors
+
+	LogitRegKernel: Kernel logistic regression<br>		options: -RegFactor (def 0): Regularization factors
+				 -Kernel (def 0): Kernel Type. 0 for linear, 1 for polynomial, 2 for RBF, 3 for sigmoid
+				 -KernelParam (def 0.05): Kernel Parameter. d for polynomial, g for RBF, a/b for sigmoid
+
+	ZeroR: Do nothing, predict everthing as zero
+
+	Wekaclassify -- trees.J48: C4.5 decision trees
+
+	Wekaclassify -- bayes.NaiveBayes: Naive Bayes
+
+	More weka classifiers, please refer to its manual
+</font></pre>
+</blockquote>
+<H2>Getting started: some examples</H2>
+<p> <b>Example 1</b></p>
+<blockquote>
+  <p>Classify DataExample1.txt <br>
+    Shuffle the data before classfication ('-sf 1')<br>
+    50%-50% train-test split (default)<br>
+    Linear Kernel Support Vector Machine</p>
+</blockquote>
+<pre>test_classify('classify -t DataExample1.txt -sf 1 -- LibSVM -Kernel 0 -CostFactor 3');</pre>
+<p><b>Example 2</b></p>
+<blockquote>
+  <p>Classify DataExample1.txt <br>
+    Shuffle the data before classfication ('-sf 1')<br>
+    Reduce the number of dimension to 15<br>
+    3 folder Cross Validation <br>
+    3 Nearest Negihbor</p>
+</blockquote>
+<pre>test_classify('classify -t DataExample1.txt -sf 1 -svd 15 -- cross_validate -t 3 -- kNN_classify -k 3');
+</pre>
+<p> <b>Example 3</b><br>
+</p>
+<blockquote>
+  <p>Classify DataExample2.txt <br>
+    Do not shuffle the data<br>
+    Use first 100 data as training, the rest as testing <br>
+    Apply a multi-class classification wrapper <br>
+    RBF Kernel SVM_LIGHT Support Vector Machine</p>
+</blockquote>
+<pre>test_classify('classify -t DataExample2.txt -sf 0 -- train_test_validate -t 100 -- train_test_multiple_class -- SVM_LIGHT -Kernel 2 -KernelParam 0.01 -CostFactor 3');</pre>
+<p> <b>Example 4</b></p>
+<blockquote> 
+  <p>Train with DataExample2.train.txt, Test with DataExample2.test.txt <br>
+    Do not shuffle the data<br>
+    Use Weka provided C4.5 Decision Trees<br>
+    AdaBoostM1 Wrapper<br>
+    No Multi-class Wrapper for Weka </p>
+</blockquote>
+<pre>test_classify(strcat('classify -t DataExample2.train.txt -sf 0 ', ...
+   ' -- test_file_validate -t DataExample2.test.txt -- MCAdaBoostM1 -- WekaClassify    -NoWrapper -- trees.J48'));</pre>
+<p><b>Example 5</b><br>
+</p>
+<blockquote>
+  <p>Classify DataExample2.txt <br>
+    Do not shuffle the data<br>
+    Rewrite the output file <br>
+    Use first 100 data as training, the rest as testing <br>
+    Apply a stacking classification wrapper, first learn three classifiers based 
+    on features (1..120), (121..150) and (154..225), majority voting on top <br>
+    Improved Iterative Scaling with 50 iterations</p>
+</blockquote>
+<pre>test_classify(strcat('classify -t DataExample2.txt -sf 0 -of w', ...<br>' -- train_test_validate -t 100 -- MCWithMultiFSet -Voting -Separator 1,120,121,150,154,225    -- IIS_classify -Iter 50'));
+</pre>
+<p><b>Example 6</b></p>
+<blockquote> 
+  <p>Classify DataExample1.txt <br>
+    Training the model using DataExample1.train.txt<br>
+    Linear Kernel Support Vector Machine</p>
+</blockquote>
+<pre>test_classify(strcat('classify -t DataExample1.train.txt -- train_only -m DataExample1.libSVM.model -- LibSVM -Kernel 0 -CostFactor 3'));</pre>
+<blockquote> 
+  <p>Classify DataExample1.txt <br>
+    Testing the new data for DataExample1.test.txt using DataExample1.libSVM.model<br>
+    Linear Kernel Support Vector Machine</p>
+</blockquote>
+<pre>test_classify(strcat('classify -t DataExample1.test.txt -- test_only -m DataExample1.libSVM.model -- LibSVM -Kernel 0 -CostFactor 3'));</pre>
+<p><b>Example 7</b></p>
+<blockquote> 
+  <p>Dimension Reduction of DataExample2.txt<br>
+    Do not shuffle the data<br>
+    Use Weka provided C4.5 Decision Trees<br>
+    AdaBoostM1 Wrapper<br>
+    No Multi-class Wrapper for Weka </p>
+</blockquote>
+<pre>test_classify('classify -t DataExample2.txt -sf 0 -svd 15 -drf DataExample2_SVD15.txt -- train_test_validate -t 1 -- ZeroR');
+</pre>
+<p><b>Example 8 (for binary code)</b></p>
+<blockquote> 
+  <p>The same as Example 1, assuming the current directory is $MATLABArsenalRoot<br>
+    Classify DataExample1.txt <br>
+    Shuffle the data before classfication ('-sf 1')<br>
+    3 folder Cross Validation <br>
+    Linear Kernel Support Vector Machine</p>
+</blockquote>
+<pre>./test_classify.exe 'classify -t demo/DataExample1.txt -sf 1 -- cross_validate -t 3 -- LibSVM -Kernel 0 -CostFactor 3'</pre>
+<p><b>Example 9 (for binary code)</b></p>
+<blockquote> 
+  <p>The same as Example 1, assuming the current directory is $MATLABArsenalRoot/demo<br>
+    Classify DataExample1.txt <br>
+    Shuffle the data before classfication ('-sf 1')<br>
+    3 folder Cross Validation <br>
+    Linear Kernel Support Vector Machine</p>
+</blockquote>
+<pre>../test_classify.exe 'classify -dir .. -t DataExample1.txt -sf 1 -- cross_validate -t 3 -- LibSVM -Kernel 0 -CostFactor 3'</pre>
+<pre>&nbsp;</pre>
+<h2>Extensions and Additions</h2>
+<UL>
+  <FONT color=#000000></FONT>
+</UL>
+<FONT color=#000000> 
+<H2>Questions and Bug Reports</H2>
+<P> <FONT color=#000000>If you find bugs or you have problems with the code you 
+  cannot solve by yourself, please contact me via email <a href="mailto:yanrong@cs.cmu.edu">yanrong@cs.cmu.edu</a>. 
+  </font></P>
+<H2>Disclaimer</H2>
+<FONT color=#000000> 
+<P>This software is free only for non-commercial use. It must not be modified 
+  and distributed without prior permission of the author. The author is not responsible 
+  for implications from the use of this software. </P>
+</FONT> 
+<h1>History</h1>
+<h1>References</h1>
+<P> <FONT color=#000000>Last modified May 3rd, 2004 by </font><A 
+href="http://www.cs.cmu.edu/%7Eyanrong" target=_top>Rong Yan</A></P>
+</FONT> 
+</BODY></HTML>
