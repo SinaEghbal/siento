@@ -20,8 +20,8 @@ clear all;
 % libPath='/My_Drive/Drive1/USYD_Research/sazzadPhD_SVN/myLib';
 
 %-----Winhows-----
-codePath='D:\USYD_Research\sazzadPhD_SVN\myFramework';
-libPath='D:\USYD_Research\sazzadPhD_SVN\myLib';
+codePath='C:\Siento\ML_Framework';
+libPath='C:\Siento\lib\ML_Framework_lib';
 
 myCodes = genpath(codePath);
 myLib = genpath(libPath);
